@@ -12,15 +12,44 @@
   </br>
   </br>
   </br>
+    <!-- component -->
+    <center>
+    <div class="preloader" id="preloader" style="display: none;height: 10000px; width: 1000px;align-items:center;background-color: #3437eb;">
+<div class="preloader w-max-full w-full h-full flex justify-center items-center h-screen">
+    <div class="relative w-24 h-24 animate-spin rounded-full bg-gradient-to-r from-purple-400 via-blue-500 to-red-400 ">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-gray-200 rounded-full border-2 border-white"></div>
+    </div>
+</div>
+    </div>
+    </center>
+    <script>
+//const loader = Document.getElementById(""
+const lo = document.getElementById("preloader" )
+       // const klo = document.getElementById("asagii")
+lo.style.display = 'block' 
+
+//klo.style.display = 'none' 
+        setTimeout(function(){
+            lo.style.display = 'none'
+            //klo.style.display = 'block' 
+        }, 4000)
+        
+    </script>
   <!-- Search -->
-  <div class=" mb-4 py-5 px-2 bg-opacity-100   relative text-gray-700">
+        <div class='text-white max-w-xs my-auto mx-auto bg-gradient-to-r from-blue-900 to-blue-500  rounded-xl '> 
+    <body id="asagii">
+    <div id="asagi">
+  <div class="asagi mb-2 bg-indigo-700 py-4 w-70 h-20 max-full m-full bg-opacity-100   relative text-gray-700" id="asagi">
     <form action="/api/weather" method="post">
   <input class="w-full h-10 pl-3 pr-8 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline" type="text" placeholder="Şehir Gir" name="country" />
-  <button type="submit" class="absolute inset-y-0 right-0 flex items-center px-4 font-bold text-white bg-indigo-600 rounded-r-lg hover:bg-indigo-500 focus:bg-indigo-700"><i class="fal fa-search-location"></i></button>
+  <button type="submit" class="bg-indigo-700 py-4 px-8 mb-2 w-4 h-25 absolute inset-y-1 right-0 flex mt-30 items-center px-7 font-bold text-white bg-indigo-600 rounded-r-lg hover:bg-indigo-700 focus:bg-indigo-700"><i class="fal fa-search-location"></i></button>
     </form>
 </div>
+    </div>
+        </div>
+        <br>
 <!-- Card -->
-<div class="antialiased min-h-screen bg-gray-100 flex items-center">
+<div id="asagi" class=" bg-gradient-to-r from-white-900 to-white-700 antialiased min-h-screen bg-gray-100 flex items-center">
   
 <div class="w-full max-w-sm mx-auto">
   <div class="bg-white shadow rounded-lg p-5 dark:bg-gray-800 w-full"
@@ -45,9 +74,13 @@
 	x-init="setInterval(function() { fetchWeatherData() }, 10000)"
 	x-cloak
 >
+               <div class="block rounded-t overflow-hidden  text-center ">
+            <div class="bg-blue text-white py-1">
+              
+
 	<h2 class="font-bold text-gray-800 text-lg dark:text-gray-400" x-text="formattedDateDisplay(new Date())"></h2>
-	
-	<template x-if="weatherData != null">
+            </div></div>
+	<template id="asagi" x-if="weatherData != null">
 		<div>
 			<div class="flex mt-4 mb-2">
 				<div class="flex-1">
@@ -104,3 +137,5 @@
 		</div>
 	</template>
 </div>
+</div>
+</body>

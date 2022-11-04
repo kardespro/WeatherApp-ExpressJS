@@ -26,7 +26,8 @@ app.get("/", (req,res) => {
 app.post("/api/weather", (req,res) => {
   var body = req.body;
   var blockedCountry = ["Armenia","armenia"]//ermeni piclerine yasak ! 
-  if(body.country.includes(blockedCountry)) { res.json({err:404,message: "Öyle Bir Yermi Varmış? "})
+  //if(body.country.includes(blockedCountry)) { res.json({err:404,message: "Öyle Bir Yermi Varmış? "})
+  if(blockedCountry.includes(body.country)) { res.json({err:404,message: "Öyle Bir Yermi Varmış? "})
                                             }
   res.redirect(`/weather?c=${body.country}`)
 })
